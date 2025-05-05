@@ -1,4 +1,4 @@
-```python
+python
 import numpy as np
 from numba import cuda
 import evdev
@@ -105,4 +105,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-```
