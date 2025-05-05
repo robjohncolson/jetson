@@ -20,7 +20,8 @@ def analyze_stroke_linearity(points, output):
         cross = abs(dx1 * dy2 - dy1 * dx2)
         output[idx] = cross  # Small cross product = more linear
 
-# CUDA kernel to estimate curvature (detects circular patterns)
+# CUDA kernel to estimate curvature
+#  (detects circular patterns)
 @cuda.jit
 def analyze_stroke_curvature(points, output):
     idx = cuda.grid(1)
